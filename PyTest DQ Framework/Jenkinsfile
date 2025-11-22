@@ -1,0 +1,133 @@
+pipeline {
+    agent any
+    
+    environment {
+        // Bind Jenkins credentials (username and password stored as jenkins-postgres-credentials)
+        POSTGRES_SECRET = credentials('jenkins-postgres-credentials')
+        POSTGRES_SECRET_USR = "${POSTGRES_SECRET_USR}"
+        POSTGRES_SECRET_PSW = "${POSTGRES_SECRET_PSW}"
+        
+        PYTHONUNBUFFERED = "1"
+        
+        // Database connection parameters for container network
+        DB_HOST = "${env.DB_HOST ?: 'postgres'}"
+        DB_PORT = "${env.DB_PORT ?: '5432'}"
+        DB_NAME = "${env.DB_NAME ?: 'mydatabase'}"
+        
+        // Artifact directories
+        ARTIFACT_DIR = "PyTest DQ Framework/artifacts"
+        REPORT_DIR = "${env.ARTIFACT_DIR}/html_report"
+    }
+    
+    stages {
+        stage('Checkout') {
+            steps { 
+                checkout scm 
+            }
+        }
+        
+        stage('Setup Python Environment') {
+            steps {
+                sh '''
+                # Create virtual environment
+                python3 -m venv .venv
+                . .venv/bin/activate
+                
+                # Upgrade pip
+                python -m pip install --upgrade pip
+                
+                # Install dependencies
+                python -m pip install -r data_dev/requirements.txt || true
+                python -m pip install -r "PyTest DQ Framework/requirements.txt" || true
+                
+                # Install packages in editable mode
+                python -m pip install -e data_dev
+                
+                # Ensure pytest and reporting plugins are installed
+                python -m pip install pytest pytest-html
+                '''
+            }
+        }
+        
+        stage('Generate Parquet Data') {
+            steps {
+                sh '''
+                . .venv/bin/activate
+                
+                # Set PYTHONPATH to repo root for imports
+                export PYTHONPATH=$WORKSPACE
+                
+                # Run data pipeline to generate parquet files
+                python data_dev/main.py
+                
+                # Verify parquet files were created
+                echo "Generated parquet files:"
+                find parquet_data -name "*.parquet" -type f || echo "No parquet files found"
+                '''
+            }
+        }
+        
+        stage('Run PyTest Data Quality Tests') {
+            steps {
+                sh '''
+                . .venv/bin/activate
+                
+                # Create report directory
+                mkdir -p "${REPORT_DIR}"
+                
+                # Set PYTHONPATH for imports
+                export PYTHONPATH=$WORKSPACE
+                
+                # Run pytest with parquet_data marker
+                pytest "PyTest DQ Framework/tests" -m "parquet_data" \\
+                    --db_host="${DB_HOST}" \\
+                    --db_port="${DB_PORT}" \\
+                    --db_name="${DB_NAME}" \\
+                    --db_user="${POSTGRES_SECRET_USR}" \\
+                    --db_password="${POSTGRES_SECRET_PSW}" \\
+                    --html="${REPORT_DIR}/report.html" \\
+                    --self-contained-html \\
+                    -v || true
+                
+                # Copy any generated parquet files to artifacts
+                mkdir -p "${ARTIFACT_DIR}/assets"
+                find . -type f -name "*.parquet" -exec cp --parents {} "${ARTIFACT_DIR}/assets/" \\; || true
+                '''
+            }
+        }
+        
+        stage('Archive Test Results') {
+            steps {
+                // Archive all test artifacts
+                archiveArtifacts artifacts: 'PyTest DQ Framework/artifacts/**', allowEmptyArchive: true
+                
+                // Archive HTML report directory
+                archiveArtifacts artifacts: 'PyTest DQ Framework/artifacts/html_report/**', allowEmptyArchive: true
+                
+                // Publish HTML report
+                publishHTML(target: [
+                    allowMissing: false,
+                    keepAll: true,
+                    reportDir: 'PyTest DQ Framework/html_report',
+                    reportFiles: 'index.html',
+                    reportName: 'HTML Test Report'
+                ])
+            }
+        }
+    }
+    
+    post {
+        always {
+            sh '''
+            echo "Pipeline finished"
+            echo "Test report available at: ${REPORT_DIR}/report.html"
+            '''
+        }
+        success {
+            echo 'Pipeline executed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed. Check logs for details.'
+        }
+    }
+}

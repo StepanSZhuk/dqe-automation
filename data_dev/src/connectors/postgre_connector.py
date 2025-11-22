@@ -5,8 +5,8 @@ from psycopg2.extensions import connection
 import pandas as pd
 from pandas import DataFrame
 
-from data_dev.config import postgres_config
-
+# Remove the dependency on data_dev.config for the PyTest version
+# from data_dev.config import postgres_config
 
 class PostgresConnectorContextManager:
     """
@@ -15,30 +15,28 @@ class PostgresConnectorContextManager:
     This class provides a convenient way to manage PostgreSQL database connections
     using a context manager. It handles connection setup and teardown, and provides
     utility methods for interacting with the database.
-
-    Attributes:
-        host (str): Hostname of the PostgreSQL server.
-        port (int): Port number of the PostgreSQL server.
-        db (str): Name of the database to connect to.
-        user (str): Username for authentication.
-        password (str): Password for authentication.
-        autocommit (bool): Whether to enable autocommit mode for the connection.
-        connection (Optional[connection]): The active database connection object.
     """
 
-    def __init__(self, autocommit: bool = False):
+    def __init__(self, db_host=None, db_port=None, db_name=None, db_user=None, db_password=None, autocommit=False):
         """
         Initialize the database context manager.
 
         Args:
+            db_host (str): Database host. Required.
+            db_port (int): Database port. Required.
+            db_name (str): Database name. Required.
+            db_user (str): Database user. Required.
+            db_password (str): Database password. Required.
             autocommit (bool): Enable or disable autocommit mode for the connection.
-                               Defaults to False.
         """
-        self.host = postgres_config.host
-        self.port = postgres_config.port
-        self.db = postgres_config.db
-        self.user = postgres_config.user
-        self.password = postgres_config.password
+        if not all([db_host, db_port, db_name, db_user, db_password]):
+            raise ValueError("All database connection parameters are required")
+            
+        self.host = db_host
+        self.port = int(db_port)
+        self.db = db_name
+        self.user = db_user
+        self.password = db_password
         self.autocommit = autocommit
         self.connection: Optional[connection] = None
 

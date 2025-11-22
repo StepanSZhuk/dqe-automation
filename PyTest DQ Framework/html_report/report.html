@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title id="head-title">report.html</title>
+      <link href="assets\style.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <h1 id="title">report.html</h1>
+    <p>Report generated on 23-Nov-2025 at 00:32:40 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a>
+        v4.1.1</p>
+    <div id="environment-header">
+      <h2>Environment</h2>
+    </div>
+    <table id="environment"></table>
+    <!-- TEMPLATES -->
+      <template id="template_environment_row">
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </template>
+    <template id="template_results-table__body--empty">
+      <tbody class="results-table-row">
+        <tr id="not-found-message">
+          <td colspan="4">No results found. Check the filters.</th>
+        </tr>
+    </template>
+    <template id="template_results-table__tbody">
+      <tbody class="results-table-row">
+        <tr class="collapsible">
+        </tr>
+        <tr class="extras-row">
+          <td class="extra" colspan="4">
+            <div class="extraHTML"></div>
+            <div class="media">
+              <div class="media-container">
+                  <div class="media-container__nav--left"><</div>
+                  <div class="media-container__viewport">
+                    <img src="" />
+                    <video controls>
+                      <source src="" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="media-container__nav--right">></div>
+                </div>
+                <div class="media__name"></div>
+                <div class="media__counter"></div>
+            </div>
+            <div class="logwrapper">
+              <div class="logexpander"></div>
+              <div class="log"></div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </template>
+    <!-- END TEMPLATES -->
+    <div class="summary">
+      <div class="summary__data">
+        <h2>Summary</h2>
+        <div class="additional-summary prefix">
+        </div>
+        <p class="run-count">24 tests took 00:00:04.</p>
+        <p class="filter">(Un)check the boxes to filter the results.</p>
+        <div class="summary__reload">
+          <div class="summary__reload__button hidden" onclick="location.reload()">
+            <div>There are still tests running. <br />Reload this page to get the latest results!</div>
+          </div>
+        </div>
+        <div class="summary__spacer"></div>
+        <div class="controls">
+          <div class="filters">
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="failed" />
+            <span class="failed">8 Failed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="passed" />
+            <span class="passed">16 Passed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="skipped" disabled/>
+            <span class="skipped">0 Skipped,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xfailed" disabled/>
+            <span class="xfailed">0 Expected failures,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xpassed" disabled/>
+            <span class="xpassed">0 Unexpected passes,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="error" disabled/>
+            <span class="error">0 Errors,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="rerun" disabled/>
+            <span class="rerun">0 Reruns</span>
+          </div>
+          <div class="collapse">
+            <button id="show_all_details">Show all details</button>&nbsp;/&nbsp;<button id="hide_all_details">Hide all details</button>
+          </div>
+        </div>
+      </div>
+      <div class="additional-summary summary">
+      </div>
+      <div class="additional-summary postfix">
+      </div>
+    </div>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable" data-column-type="result">Result</th>
+          <th class="sortable" data-column-type="testId">Test</th>
+          <th class="sortable" data-column-type="duration">Duration</th>
+          <th>Links</th>
+        </tr>
+      </thead>
+    </table>
+  </body>
+  <footer>
+    <div id="data-container" data-jsonblob="{&#34;environment&#34;: {&#34;Python&#34;: &#34;3.13.5&#34;, &#34;Platform&#34;: &#34;Windows-11-10.0.26100-SP0&#34;, &#34;Packages&#34;: {&#34;pytest&#34;: &#34;9.0.1&#34;, &#34;pluggy&#34;: &#34;1.6.0&#34;}, &#34;Plugins&#34;: {&#34;html&#34;: &#34;4.1.1&#34;, &#34;metadata&#34;: &#34;3.1.1&#34;}}, &#34;tests&#34;: {&#34;dq checks/parquet_files/test_facility_name_min_time_spent_per_visit_date.py::test_check_not_null_values&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;dq checks/parquet_files/test_facility_name_min_time_spent_per_visit_date.py::test_check_not_null_values&#34;, &#34;duration&#34;: &#34;00:00:01&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;dq checks/parquet_files/test_facility_name_min_time_spent_per_visit_date.py::test_check_not_null_values&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:01&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;dq checks/parquet_files/test_facility_name_min_time_spent_per_visit_date.py::test_check_dataset_is_not_empty&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;dq checks/parquet_files/test_facility_name_min_time_spent_per_visit_date.py::test_check_dataset_is_not_empty&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;dq checks/parquet_files/test_facility_name_min_time_spent_per_visit_date.py::test_check_dataset_is_not_empty&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;dq checks/parquet_files/test_facility_name_min_time_spent_per_visit_date.py::test_check_count&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;dq checks/parquet_files/test_facility_name_min_time_spent_per_visit_date.py::test_check_count&#34;, &#34;duration&#34;: &#34;409 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;dq checks/parquet_files/test_facility_name_min_time_spent_per_visit_date.py::test_check_count&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;409 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;source_data =                   facility_name  visit_date  min_time_spent\n0                  Davies-Wolfe  2000-01-01              5...nford  2025-11-21              17\n34443  Moreno, Wong and Sanford  2025-11-22              20\n\n[34444 rows x 3 columns]\ntarget_data =               facility_name visit_date  min_time_spent\n0              Davies-Wolfe 2000-01-01              54\n1       ...h and Clark 2025-11-10              17\n42984  Lee, Singh and Clark 2025-11-01              34\n\n[42985 rows x 3 columns]\ndata_quality_library = &amp;lt;src.data_quality.data_quality_validation_library.DataQualityLibrary object at 0x000001ABCAD92F90&amp;gt;\n\n    @pytest.mark.parquet_data\n    @pytest.mark.facility_name_min_time_spent_per_visit_date\n    def test_check_count(source_data, target_data, data_quality_library):\n        &amp;quot;&amp;quot;&amp;quot;Compare record counts: target (aggregated) should be == source (raw)&amp;quot;&amp;quot;&amp;quot;\n&amp;gt;       data_quality_library.check_count(\n            source_data,\n            target_data,\n            source_name=&amp;quot;source (visits_facilities)&amp;quot;,\n            target_name=&amp;quot;target (aggregated parquet)&amp;quot;\n        )\n\ntests\\dq checks\\parquet_files\\test_facility_name_min_time_spent_per_visit_date.py:69: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nsource_df =                   facility_name  visit_date  min_time_spent\n0                  Davies-Wolfe  2000-01-01              5...nford  2025-11-21              17\n34443  Moreno, Wong and Sanford  2025-11-22              20\n\n[34444 rows x 3 columns]\ntarget_df =               facility_name visit_date  min_time_spent\n0              Davies-Wolfe 2000-01-01              54\n1       ...h and Clark 2025-11-10              17\n42984  Lee, Singh and Clark 2025-11-01              34\n\n[42985 rows x 3 columns]\nsource_name = &amp;#x27;source (visits_facilities)&amp;#x27;, target_name = &amp;#x27;target (aggregated parquet)&amp;#x27;\n\n    @staticmethod\n    def check_count(source_df: DataFrame, target_df: DataFrame,\n                   source_name: str = &amp;quot;source&amp;quot;, target_name: str = &amp;quot;target&amp;quot;) -&amp;gt; None:\n        &amp;quot;&amp;quot;&amp;quot;\n        Compare record counts between source and target datasets.\n    \n        For aggregated data, target count should be &amp;lt;= source count.\n        Use tolerance to allow acceptable variance.\n    \n        Args:\n            source_df (DataFrame): Source dataset\n            target_df (DataFrame): Target dataset (typically aggregated)\n            source_name (str): Name of source dataset for messages\n            target_name (str): Name of target dataset for messages\n            tolerance (int): Acceptable difference in record counts (default: 0)\n    \n        Raises:\n            AssertionError: If counts don&amp;#x27;t meet expectations\n        &amp;quot;&amp;quot;&amp;quot;\n        if not isinstance(source_df, pd.DataFrame):\n            raise TypeError(f&amp;quot;{source_name} must be a pandas DataFrame.&amp;quot;)\n        if not isinstance(target_df, pd.DataFrame):\n            raise TypeError(f&amp;quot;{target_name} must be a pandas DataFrame.&amp;quot;)\n    \n        source_count = len(source_df)\n        target_count = len(target_df)\n    \n        # For aggregated target data, target should have fewer or equal records than source\n        assert target_count &amp;gt; 0, f&amp;quot;{target_name} is empty (0 records)&amp;quot;\n        assert source_count &amp;gt; 0, f&amp;quot;{source_name} is empty (0 records)&amp;quot;\n    \n        # Log the counts for visibility\n        print(f&amp;quot;\\nRecord Count Comparison:&amp;quot;)\n        print(f&amp;quot;  {source_name}: {source_count:,} records&amp;quot;)\n        print(f&amp;quot;  {target_name}: {target_count:,} records&amp;quot;)\n        print(f&amp;quot;  Difference: {source_count - target_count:,} records&amp;quot;)\n        print(f&amp;quot;  Ratio: {target_count/source_count:.2%} (target/source)&amp;quot;)\n    \n        # For aggregated data, target should be smaller or equal\n&amp;gt;       assert target_count == source_count, (\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n            f&amp;quot;{target_name} has MORE records than {source_name}! &amp;quot;\n            f&amp;quot;Target: {target_count:,}, Source: {source_count:,}&amp;quot;\n        )\nE       AssertionError: target (aggregated parquet) has MORE records than source (visits_facilities)! Target: 42,985, Source: 34,444\n\nsrc\\data_quality\\data_quality_validation_library.py:87: AssertionError\n&#34;}], &#34;dq checks/parquet_files/test_facility_name_min_time_spent_per_visit_date.py::test_check_data_completeness&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;dq checks/parquet_files/test_facility_name_min_time_spent_per_visit_date.py::test_check_data_completeness&#34;, &#34;duration&#34;: &#34;154 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;dq checks/parquet_files/test_facility_name_min_time_spent_per_visit_date.py::test_check_data_completeness&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;154 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;source_data =                   facility_name  visit_date  min_time_spent\n0                  Davies-Wolfe  2000-01-01              5...nford  2025-11-21              17\n34443  Moreno, Wong and Sanford  2025-11-22              20\n\n[34444 rows x 3 columns]\ntarget_data =               facility_name visit_date  min_time_spent\n0              Davies-Wolfe 2000-01-01              54\n1       ...h and Clark 2025-11-10              17\n42984  Lee, Singh and Clark 2025-11-01              34\n\n[42985 rows x 3 columns]\ndata_quality_library = &amp;lt;src.data_quality.data_quality_validation_library.DataQualityLibrary object at 0x000001ABCAD92F90&amp;gt;\n\n    @pytest.mark.parquet_data\n    @pytest.mark.facility_name_min_time_spent_per_visit_date\n    def test_check_data_completeness(source_data, target_data, data_quality_library):\n        &amp;quot;&amp;quot;&amp;quot;\n        Validate that target aggregation matches source data.\n    \n        Target transformation:\n        - GROUP BY facility_name, visit_date (from visit_timestamp)\n        - MIN(duration_minutes) AS min_time_spent\n        &amp;quot;&amp;quot;&amp;quot;\n&amp;gt;       data_quality_library.check_data_completeness(\n            source_df=source_data,\n            target_df=target_data,\n            source_groupby_cols=[&amp;#x27;facility_name&amp;#x27;, &amp;#x27;visit_date&amp;#x27;],\n            source_agg_col=&amp;#x27;duration_minutes&amp;#x27;,\n            target_groupby_cols=[&amp;#x27;facility_name&amp;#x27;, &amp;#x27;visit_date&amp;#x27;],\n            target_agg_col=&amp;#x27;min_time_spent&amp;#x27;,\n            agg_function=&amp;#x27;min&amp;#x27;,\n            source_name=&amp;quot;source (Postgres visits_facilities)&amp;quot;,\n            target_name=&amp;quot;target (parquet aggregated)&amp;quot;\n        )\n\ntests\\dq checks\\parquet_files\\test_facility_name_min_time_spent_per_visit_date.py:87: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nsource_df =                   facility_name  visit_date  min_time_spent\n0                  Davies-Wolfe  2000-01-01              5...nford  2025-11-21              17\n34443  Moreno, Wong and Sanford  2025-11-22              20\n\n[34444 rows x 3 columns]\ntarget_df =               facility_name visit_date  min_time_spent\n0              Davies-Wolfe 2000-01-01              54\n1       ...h and Clark 2025-11-10              17\n42984  Lee, Singh and Clark 2025-11-01              34\n\n[42985 rows x 3 columns]\nsource_groupby_cols = [&amp;#x27;facility_name&amp;#x27;, &amp;#x27;visit_date&amp;#x27;], source_agg_col = &amp;#x27;duration_minutes&amp;#x27;\ntarget_groupby_cols = [&amp;#x27;facility_name&amp;#x27;, &amp;#x27;visit_date&amp;#x27;], target_agg_col = &amp;#x27;min_time_spent&amp;#x27;, agg_function = &amp;#x27;min&amp;#x27;\nsource_name = &amp;#x27;source (Postgres visits_facilities)&amp;#x27;, target_name = &amp;#x27;target (parquet aggregated)&amp;#x27;\nnumeric_tolerance = 0.01\n\n    @staticmethod\n    def check_data_completeness(\n        source_df: DataFrame,\n        target_df: DataFrame,\n        source_groupby_cols: list,\n        source_agg_col: str,\n        target_groupby_cols: list,\n        target_agg_col: str,\n        agg_function: str = &amp;quot;min&amp;quot;,\n        source_name: str = &amp;quot;source&amp;quot;,\n        target_name: str = &amp;quot;target&amp;quot;,\n        numeric_tolerance: float = 0.01,\n    ) -&amp;gt; None:\n        &amp;quot;&amp;quot;&amp;quot;\n        Compare source and target DataFrames directly without performing grouping.\n        Requires `source_df` to already be pre-aggregated at the same grain as `target_df`.\n        &amp;quot;&amp;quot;&amp;quot;\n        # Validate inputs\n        if not isinstance(source_df, pd.DataFrame):\n            raise TypeError(f&amp;quot;{source_name} must be a pandas DataFrame.&amp;quot;)\n        if not isinstance(target_df, pd.DataFrame):\n            raise TypeError(f&amp;quot;{target_name} must be a pandas DataFrame.&amp;quot;)\n    \n        # Columns to compare (use target names)\n        group_cols = list(target_groupby_cols)\n        val_col = target_agg_col\n    \n        # Ensure target has the comparison columns\n        missing_t = [c for c in group_cols + [val_col] if c not in target_df.columns]\n        assert not missing_t, f&amp;quot;{target_name} missing columns: {missing_t}&amp;quot;\n    \n        # Prepare source for comparison:\n        # if source already has target val col, use it; otherwise try to rename source_agg_col -&amp;gt; val_col\n        if all(c in source_df.columns for c in group_cols + [val_col]):\n            s = source_df[group_cols + [val_col]].copy()\n        elif all(c in source_df.columns for c in group_cols + [source_agg_col]):\n            s = source_df[group_cols + [source_agg_col]].copy().rename(columns={source_agg_col: val_col})\n        else:\n            missing_s = [c for c in group_cols + [source_agg_col] if c not in source_df.columns]\n            raise AssertionError(\n                f&amp;quot;{source_name} missing required pre-aggregated columns: {missing_s}. &amp;quot;\n                &amp;quot;This check requires source to already be aggregated to the same grain as target.&amp;quot;\n            )\n    \n        t = target_df[group_cols + [val_col]].copy()\n    \n        # Ensure source is pre-aggregated (no duplicate group keys)\n        dup_mask = s.duplicated(subset=group_cols, keep=False)\n        if dup_mask.any():\n            raise AssertionError(\n                f&amp;quot;{source_name} appears to have multiple rows per group (must be pre-aggregated). &amp;quot;\n                f&amp;quot;Example duplicates:\\n{s[dup_mask].head(5)}&amp;quot;\n            )\n    \n        # Normalize date/timestamp columns and numeric column\n        def _normalize_dates(df, cols):\n            for c in cols:\n                if &amp;#x27;date&amp;#x27; in c.lower() or &amp;#x27;timestamp&amp;#x27; in c.lower():\n                    if c in df.columns:\n                        df[c] = pd.to_datetime(df[c], errors=&amp;#x27;coerce&amp;#x27;).dt.normalize()\n    \n        _normalize_dates(s, group_cols)\n        _normalize_dates(t, group_cols)\n    \n        s[val_col] = pd.to_numeric(s[val_col], errors=&amp;#x27;coerce&amp;#x27;)\n        t[val_col] = pd.to_numeric(t[val_col], errors=&amp;#x27;coerce&amp;#x27;)\n    \n        # Drop rows with any NA in key or value columns (they are invalid for comparison)\n        s = s.dropna(subset=group_cols + [val_col])\n        t = t.dropna(subset=group_cols + [val_col])\n    \n        # Sort deterministically\n        s = s.sort_values(by=group_cols).reset_index(drop=True)\n        t = t.sort_values(by=group_cols).reset_index(drop=True)\n    \n        # Quick shape check with helpful diagnostics\n        if s.shape != t.shape:\n            merged = s.merge(t, on=group_cols, how=&amp;#x27;outer&amp;#x27;, indicator=True)\n            missing_in_target = merged[merged[&amp;#x27;_merge&amp;#x27;] == &amp;#x27;left_only&amp;#x27;][group_cols].head(5)\n            extra_in_target = merged[merged[&amp;#x27;_merge&amp;#x27;] == &amp;#x27;right_only&amp;#x27;][group_cols].head(5)\n            msg = (\n                f&amp;quot;Shape mismatch: {source_name} {s.shape} vs {target_name} {t.shape}.\\n&amp;quot;\n            )\n            if not missing_in_target.empty:\n                msg += f&amp;quot;Groups in {source_name} but missing in {target_name} (examples):\\n{missing_in_target.to_string(index=False)}\\n&amp;quot;\n            if not extra_in_target.empty:\n                msg += f&amp;quot;Groups in {target_name} but missing in {source_name} (examples):\\n{extra_in_target.to_string(index=False)}\\n&amp;quot;\n&amp;gt;           raise AssertionError(msg)\nE           AssertionError: Shape mismatch: source (Postgres visits_facilities) (34444, 3) vs target (parquet aggregated) (42985, 3).\nE           Groups in source (Postgres visits_facilities) but missing in target (parquet aggregated) (examples):\nE                        facility_name visit_date\nE                         Davies-Wolfe 2025-11-21\nE                         Davies-Wolfe 2025-11-22\nE                 Lee, Singh and Clark 2025-11-21\nE                 Lee, Singh and Clark 2025-11-22\nE           Mccarthy, Kennedy and Holt 2025-11-21\n\nsrc\\data_quality\\data_quality_validation_library.py:179: AssertionError\n&#34;}], &#34;dq checks/parquet_files/test_facility_name_min_time_spent_per_visit_date.py::test_check_no_duplicates&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;dq checks/parquet_files/test_facility_name_min_time_spent_per_visit_date.py::test_check_no_duplicates&#34;, &#34;duration&#34;: &#34;36 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;dq checks/parquet_files/test_facility_name_min_time_spent_per_visit_date.py::test_check_no_duplicates&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;36 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;target_data =               facility_name visit_date  min_time_spent\n0              Davies-Wolfe 2000-01-01              54\n1       ...h and Clark 2025-11-10              17\n42984  Lee, Singh and Clark 2025-11-01              34\n\n[42985 rows x 3 columns]\ndata_quality_library = &amp;lt;src.data_quality.data_quality_validation_library.DataQualityLibrary object at 0x000001ABCAD92F90&amp;gt;\n\n    @pytest.mark.parquet_data\n    @pytest.mark.facility_name_min_time_spent_per_visit_date\n    def test_check_no_duplicates(target_data, data_quality_library):\n        &amp;quot;&amp;quot;&amp;quot;Check that there are no duplicate rows in the dataset.&amp;quot;&amp;quot;&amp;quot;\n&amp;gt;       data_quality_library.check_duplicates(\n            target_data,\n            column_names=[&amp;quot;facility_name&amp;quot;, &amp;quot;visit_date&amp;quot;, &amp;quot;min_time_spent&amp;quot;],\n            dataset_name=&amp;quot;facility_name_min_time_spent_per_visit_date&amp;quot;\n        )\n\ntests\\dq checks\\parquet_files\\test_facility_name_min_time_spent_per_visit_date.py:103: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\ndf =               facility_name visit_date  min_time_spent\n0              Davies-Wolfe 2000-01-01              54\n1       ...h and Clark 2025-11-10              17\n42984  Lee, Singh and Clark 2025-11-01              34\n\n[42985 rows x 3 columns]\ncolumn_names = [&amp;#x27;facility_name&amp;#x27;, &amp;#x27;visit_date&amp;#x27;, &amp;#x27;min_time_spent&amp;#x27;]\ndataset_name = &amp;#x27;facility_name_min_time_spent_per_visit_date&amp;#x27;\n\n    @staticmethod\n    def check_duplicates(df: DataFrame, column_names=None, dataset_name: str = &amp;quot;dataset&amp;quot;) -&amp;gt; None:\n        &amp;quot;&amp;quot;&amp;quot;\n        Check for duplicate rows in a DataFrame.\n        Args:\n            df (DataFrame): The DataFrame to check for duplicates.\n            column_names (list, optional): List of column names to check for duplicates.\n                                          If None, checks all columns.\n            dataset_name (str): Name of the dataset for error messages.\n    \n        Raises:\n            AssertionError: If duplicate rows are found.\n        &amp;quot;&amp;quot;&amp;quot;\n        if not isinstance(df, pd.DataFrame):\n            raise TypeError(f&amp;quot;{dataset_name} must be a pandas DataFrame.&amp;quot;)\n    \n        # Determine which columns to check\n        columns_to_check = column_names if column_names else df.columns.tolist()\n    \n        # Find duplicates\n        duplicates = df[df.duplicated(subset=columns_to_check, keep=False)]\n    \n        if not duplicates.empty:\n            # Get count of duplicates\n            duplicate_count = df.duplicated(subset=columns_to_check).sum()\n    \n            # Show example of duplicates\n            example_duplicates = duplicates.head(5)\n    \n&amp;gt;           assert False, (\n                   ^^^^^\n                f&amp;quot;{dataset_name} contains {duplicate_count} duplicate row(s) &amp;quot;\n                f&amp;quot;based on columns {columns_to_check}.\\n&amp;quot;\n                f&amp;quot;Example duplicates:\\n{example_duplicates}&amp;quot;\n            )\nE           AssertionError: facility_name_min_time_spent_per_visit_date contains 8549 duplicate row(s) based on columns [&amp;#x27;facility_name&amp;#x27;, &amp;#x27;visit_date&amp;#x27;, &amp;#x27;min_time_spent&amp;#x27;].\nE           Example duplicates:\nE                      facility_name visit_date  min_time_spent\nE           28  Lee, Singh and Clark 2000-01-01              33\nE           29  Lee, Singh and Clark 2000-01-02              60\nE           30  Lee, Singh and Clark 2000-01-03              32\nE           31  Lee, Singh and Clark 2000-01-04              46\nE           32  Lee, Singh and Clark 2000-01-05              16\n\nsrc\\data_quality\\data_quality_validation_library.py:42: AssertionError\n&#34;}], &#34;dq checks/parquet_files/test_facility_type_avg_time_spent_per_visit_date.py::test_check_dataset_is_not_empty&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;dq checks/parquet_files/test_facility_type_avg_time_spent_per_visit_date.py::test_check_dataset_is_not_empty&#34;, &#34;duration&#34;: &#34;917 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;dq checks/parquet_files/test_facility_type_avg_time_spent_per_visit_date.py::test_check_dataset_is_not_empty&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;917 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;dq checks/parquet_files/test_facility_type_avg_time_spent_per_visit_date.py::test_check_not_null_values&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;dq checks/parquet_files/test_facility_type_avg_time_spent_per_visit_date.py::test_check_not_null_values&#34;, &#34;duration&#34;: &#34;15 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;dq checks/parquet_files/test_facility_type_avg_time_spent_per_visit_date.py::test_check_not_null_values&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;15 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;dq checks/parquet_files/test_facility_type_avg_time_spent_per_visit_date.py::test_check_no_duplicates&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;dq checks/parquet_files/test_facility_type_avg_time_spent_per_visit_date.py::test_check_no_duplicates&#34;, &#34;duration&#34;: &#34;12 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;dq checks/parquet_files/test_facility_type_avg_time_spent_per_visit_date.py::test_check_no_duplicates&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;12 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;dq checks/parquet_files/test_facility_type_avg_time_spent_per_visit_date.py::test_check_count&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;dq checks/parquet_files/test_facility_type_avg_time_spent_per_visit_date.py::test_check_count&#34;, &#34;duration&#34;: &#34;354 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;dq checks/parquet_files/test_facility_type_avg_time_spent_per_visit_date.py::test_check_count&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;354 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;source_data =       facility_type  visit_date  avg_time_spent\n0            Clinic  2000-01-01           33.00\n1            Clinic  2...442   Urgent Care  2025-11-21           30.00\n34443   Urgent Care  2025-11-22           17.00\n\n[34444 rows x 3 columns]\ntarget_data =           facility_type visit_date  avg_time_spent\n0                Clinic 2000-11-27           22.00\n1               ...pecialty Center 2025-11-12           24.00\n24988            Clinic 2025-11-11           29.50\n\n[24989 rows x 3 columns]\ndata_quality_library = &amp;lt;src.data_quality.data_quality_validation_library.DataQualityLibrary object at 0x000001ABCAD92F90&amp;gt;\n\n    @pytest.mark.parquet_data\n    @pytest.mark.facility_type_avg_time_spent_per_visit_date\n    def test_check_count(source_data, target_data, data_quality_library):\n        &amp;quot;&amp;quot;&amp;quot;Compare record counts: target (aggregated) should be == source (raw)&amp;quot;&amp;quot;&amp;quot;\n&amp;gt;       data_quality_library.check_count(\n            source_data,\n            target_data,\n            source_name=&amp;quot;source (visits_facilities)&amp;quot;,\n            target_name=&amp;quot;target (aggregated parquet)&amp;quot;\n        )\n\ntests\\dq checks\\parquet_files\\test_facility_type_avg_time_spent_per_visit_date.py:79: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nsource_df =       facility_type  visit_date  avg_time_spent\n0            Clinic  2000-01-01           33.00\n1            Clinic  2...442   Urgent Care  2025-11-21           30.00\n34443   Urgent Care  2025-11-22           17.00\n\n[34444 rows x 3 columns]\ntarget_df =           facility_type visit_date  avg_time_spent\n0                Clinic 2000-11-27           22.00\n1               ...pecialty Center 2025-11-12           24.00\n24988            Clinic 2025-11-11           29.50\n\n[24989 rows x 3 columns]\nsource_name = &amp;#x27;source (visits_facilities)&amp;#x27;, target_name = &amp;#x27;target (aggregated parquet)&amp;#x27;\n\n    @staticmethod\n    def check_count(source_df: DataFrame, target_df: DataFrame,\n                   source_name: str = &amp;quot;source&amp;quot;, target_name: str = &amp;quot;target&amp;quot;) -&amp;gt; None:\n        &amp;quot;&amp;quot;&amp;quot;\n        Compare record counts between source and target datasets.\n    \n        For aggregated data, target count should be &amp;lt;= source count.\n        Use tolerance to allow acceptable variance.\n    \n        Args:\n            source_df (DataFrame): Source dataset\n            target_df (DataFrame): Target dataset (typically aggregated)\n            source_name (str): Name of source dataset for messages\n            target_name (str): Name of target dataset for messages\n            tolerance (int): Acceptable difference in record counts (default: 0)\n    \n        Raises:\n            AssertionError: If counts don&amp;#x27;t meet expectations\n        &amp;quot;&amp;quot;&amp;quot;\n        if not isinstance(source_df, pd.DataFrame):\n            raise TypeError(f&amp;quot;{source_name} must be a pandas DataFrame.&amp;quot;)\n        if not isinstance(target_df, pd.DataFrame):\n            raise TypeError(f&amp;quot;{target_name} must be a pandas DataFrame.&amp;quot;)\n    \n        source_count = len(source_df)\n        target_count = len(target_df)\n    \n        # For aggregated target data, target should have fewer or equal records than source\n        assert target_count &amp;gt; 0, f&amp;quot;{target_name} is empty (0 records)&amp;quot;\n        assert source_count &amp;gt; 0, f&amp;quot;{source_name} is empty (0 records)&amp;quot;\n    \n        # Log the counts for visibility\n        print(f&amp;quot;\\nRecord Count Comparison:&amp;quot;)\n        print(f&amp;quot;  {source_name}: {source_count:,} records&amp;quot;)\n        print(f&amp;quot;  {target_name}: {target_count:,} records&amp;quot;)\n        print(f&amp;quot;  Difference: {source_count - target_count:,} records&amp;quot;)\n        print(f&amp;quot;  Ratio: {target_count/source_count:.2%} (target/source)&amp;quot;)\n    \n        # For aggregated data, target should be smaller or equal\n&amp;gt;       assert target_count == source_count, (\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n            f&amp;quot;{target_name} has MORE records than {source_name}! &amp;quot;\n            f&amp;quot;Target: {target_count:,}, Source: {source_count:,}&amp;quot;\n        )\nE       AssertionError: target (aggregated parquet) has MORE records than source (visits_facilities)! Target: 24,989, Source: 34,444\n\nsrc\\data_quality\\data_quality_validation_library.py:87: AssertionError\n&#34;}], &#34;dq checks/parquet_files/test_facility_type_avg_time_spent_per_visit_date.py::test_check_data_completeness&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;dq checks/parquet_files/test_facility_type_avg_time_spent_per_visit_date.py::test_check_data_completeness&#34;, &#34;duration&#34;: &#34;109 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;dq checks/parquet_files/test_facility_type_avg_time_spent_per_visit_date.py::test_check_data_completeness&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;109 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;source_data =       facility_type  visit_date  avg_time_spent\n0            Clinic  2000-01-01           33.00\n1            Clinic  2...442   Urgent Care  2025-11-21           30.00\n34443   Urgent Care  2025-11-22           17.00\n\n[34444 rows x 3 columns]\ntarget_data =           facility_type visit_date  avg_time_spent\n0                Clinic 2000-11-27           22.00\n1               ...pecialty Center 2025-11-12           24.00\n24988            Clinic 2025-11-11           29.50\n\n[24989 rows x 3 columns]\ndata_quality_library = &amp;lt;src.data_quality.data_quality_validation_library.DataQualityLibrary object at 0x000001ABCAD92F90&amp;gt;\n\n    @pytest.mark.parquet_data\n    @pytest.mark.facility_type_avg_time_spent_per_visit_date\n    def test_check_data_completeness(source_data, target_data, data_quality_library):\n        &amp;quot;&amp;quot;&amp;quot;\n        Validate that target aggregation matches source data.\n    \n        Target transformation:\n        - GROUP BY facility_type, visit_date (from visit_timestamp)\n        - AVG(duration_minutes) AS avg_time_spent\n        &amp;quot;&amp;quot;&amp;quot;\n&amp;gt;       data_quality_library.check_data_completeness(\n            source_df=source_data,\n            target_df=target_data,\n            source_groupby_cols=[&amp;#x27;facility_type&amp;#x27;, &amp;#x27;visit_date&amp;#x27;],\n            source_agg_col=&amp;#x27;duration_minutes&amp;#x27;,\n            target_groupby_cols=[&amp;#x27;facility_type&amp;#x27;, &amp;#x27;visit_date&amp;#x27;],\n            target_agg_col=&amp;#x27;avg_time_spent&amp;#x27;,\n            agg_function=&amp;#x27;avg&amp;#x27;,\n            source_name=&amp;quot;source (Postgres visits_facilities)&amp;quot;,\n            target_name=&amp;quot;target (parquet aggregated)&amp;quot;\n        )\n\ntests\\dq checks\\parquet_files\\test_facility_type_avg_time_spent_per_visit_date.py:96: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nsource_df =       facility_type  visit_date  avg_time_spent\n0            Clinic  2000-01-01           33.00\n1            Clinic  2...442   Urgent Care  2025-11-21           30.00\n34443   Urgent Care  2025-11-22           17.00\n\n[34444 rows x 3 columns]\ntarget_df =           facility_type visit_date  avg_time_spent\n0                Clinic 2000-11-27           22.00\n1               ...pecialty Center 2025-11-12           24.00\n24988            Clinic 2025-11-11           29.50\n\n[24989 rows x 3 columns]\nsource_groupby_cols = [&amp;#x27;facility_type&amp;#x27;, &amp;#x27;visit_date&amp;#x27;], source_agg_col = &amp;#x27;duration_minutes&amp;#x27;\ntarget_groupby_cols = [&amp;#x27;facility_type&amp;#x27;, &amp;#x27;visit_date&amp;#x27;], target_agg_col = &amp;#x27;avg_time_spent&amp;#x27;, agg_function = &amp;#x27;avg&amp;#x27;\nsource_name = &amp;#x27;source (Postgres visits_facilities)&amp;#x27;, target_name = &amp;#x27;target (parquet aggregated)&amp;#x27;\nnumeric_tolerance = 0.01\n\n    @staticmethod\n    def check_data_completeness(\n        source_df: DataFrame,\n        target_df: DataFrame,\n        source_groupby_cols: list,\n        source_agg_col: str,\n        target_groupby_cols: list,\n        target_agg_col: str,\n        agg_function: str = &amp;quot;min&amp;quot;,\n        source_name: str = &amp;quot;source&amp;quot;,\n        target_name: str = &amp;quot;target&amp;quot;,\n        numeric_tolerance: float = 0.01,\n    ) -&amp;gt; None:\n        &amp;quot;&amp;quot;&amp;quot;\n        Compare source and target DataFrames directly without performing grouping.\n        Requires `source_df` to already be pre-aggregated at the same grain as `target_df`.\n        &amp;quot;&amp;quot;&amp;quot;\n        # Validate inputs\n        if not isinstance(source_df, pd.DataFrame):\n            raise TypeError(f&amp;quot;{source_name} must be a pandas DataFrame.&amp;quot;)\n        if not isinstance(target_df, pd.DataFrame):\n            raise TypeError(f&amp;quot;{target_name} must be a pandas DataFrame.&amp;quot;)\n    \n        # Columns to compare (use target names)\n        group_cols = list(target_groupby_cols)\n        val_col = target_agg_col\n    \n        # Ensure target has the comparison columns\n        missing_t = [c for c in group_cols + [val_col] if c not in target_df.columns]\n        assert not missing_t, f&amp;quot;{target_name} missing columns: {missing_t}&amp;quot;\n    \n        # Prepare source for comparison:\n        # if source already has target val col, use it; otherwise try to rename source_agg_col -&amp;gt; val_col\n        if all(c in source_df.columns for c in group_cols + [val_col]):\n            s = source_df[group_cols + [val_col]].copy()\n        elif all(c in source_df.columns for c in group_cols + [source_agg_col]):\n            s = source_df[group_cols + [source_agg_col]].copy().rename(columns={source_agg_col: val_col})\n        else:\n            missing_s = [c for c in group_cols + [source_agg_col] if c not in source_df.columns]\n            raise AssertionError(\n                f&amp;quot;{source_name} missing required pre-aggregated columns: {missing_s}. &amp;quot;\n                &amp;quot;This check requires source to already be aggregated to the same grain as target.&amp;quot;\n            )\n    \n        t = target_df[group_cols + [val_col]].copy()\n    \n        # Ensure source is pre-aggregated (no duplicate group keys)\n        dup_mask = s.duplicated(subset=group_cols, keep=False)\n        if dup_mask.any():\n            raise AssertionError(\n                f&amp;quot;{source_name} appears to have multiple rows per group (must be pre-aggregated). &amp;quot;\n                f&amp;quot;Example duplicates:\\n{s[dup_mask].head(5)}&amp;quot;\n            )\n    \n        # Normalize date/timestamp columns and numeric column\n        def _normalize_dates(df, cols):\n            for c in cols:\n                if &amp;#x27;date&amp;#x27; in c.lower() or &amp;#x27;timestamp&amp;#x27; in c.lower():\n                    if c in df.columns:\n                        df[c] = pd.to_datetime(df[c], errors=&amp;#x27;coerce&amp;#x27;).dt.normalize()\n    \n        _normalize_dates(s, group_cols)\n        _normalize_dates(t, group_cols)\n    \n        s[val_col] = pd.to_numeric(s[val_col], errors=&amp;#x27;coerce&amp;#x27;)\n        t[val_col] = pd.to_numeric(t[val_col], errors=&amp;#x27;coerce&amp;#x27;)\n    \n        # Drop rows with any NA in key or value columns (they are invalid for comparison)\n        s = s.dropna(subset=group_cols + [val_col])\n        t = t.dropna(subset=group_cols + [val_col])\n    \n        # Sort deterministically\n        s = s.sort_values(by=group_cols).reset_index(drop=True)\n        t = t.sort_values(by=group_cols).reset_index(drop=True)\n    \n        # Quick shape check with helpful diagnostics\n        if s.shape != t.shape:\n            merged = s.merge(t, on=group_cols, how=&amp;#x27;outer&amp;#x27;, indicator=True)\n            missing_in_target = merged[merged[&amp;#x27;_merge&amp;#x27;] == &amp;#x27;left_only&amp;#x27;][group_cols].head(5)\n            extra_in_target = merged[merged[&amp;#x27;_merge&amp;#x27;] == &amp;#x27;right_only&amp;#x27;][group_cols].head(5)\n            msg = (\n                f&amp;quot;Shape mismatch: {source_name} {s.shape} vs {target_name} {t.shape}.\\n&amp;quot;\n            )\n            if not missing_in_target.empty:\n                msg += f&amp;quot;Groups in {source_name} but missing in {target_name} (examples):\\n{missing_in_target.to_string(index=False)}\\n&amp;quot;\n            if not extra_in_target.empty:\n                msg += f&amp;quot;Groups in {target_name} but missing in {source_name} (examples):\\n{extra_in_target.to_string(index=False)}\\n&amp;quot;\n&amp;gt;           raise AssertionError(msg)\nE           AssertionError: Shape mismatch: source (Postgres visits_facilities) (34444, 3) vs target (parquet aggregated) (24989, 3).\nE           Groups in source (Postgres visits_facilities) but missing in target (parquet aggregated) (examples):\nE           facility_type visit_date\nE                  Clinic 2000-01-01\nE                  Clinic 2000-01-02\nE                  Clinic 2000-01-03\nE                  Clinic 2000-01-04\nE                  Clinic 2000-01-05\n\nsrc\\data_quality\\data_quality_validation_library.py:179: AssertionError\n&#34;}], &#34;dq checks/parquet_files/test_patient_sum_treatment_cost_per_facility_type.py::test_check_not_null_values&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;dq checks/parquet_files/test_patient_sum_treatment_cost_per_facility_type.py::test_check_not_null_values&#34;, &#34;duration&#34;: &#34;24 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;dq checks/parquet_files/test_patient_sum_treatment_cost_per_facility_type.py::test_check_not_null_values&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;24 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;target_data =    facility_type          full_name  sum_treatment_cost\n0         Clinic       Cheryl Clark         -1625686.43\n1     ...e      Timothy Clark          1701890.19\n63   Urgent Care               None         25341991.28\n\n[64 rows x 3 columns]\ndata_quality_library = &amp;lt;src.data_quality.data_quality_validation_library.DataQualityLibrary object at 0x000001ABCAD92F90&amp;gt;\n\n    @pytest.mark.parquet_data\n    @pytest.mark.patient_sum_treatment_cost_per_facility_type\n    def test_check_not_null_values(target_data, data_quality_library):\n        print(target_data)\n&amp;gt;       data_quality_library.check_not_null_values(\n            target_data,\n            [&amp;quot;facility_type&amp;quot;, &amp;quot;full_name&amp;quot;, &amp;quot;sum_treatment_cost&amp;quot;],\n        )\n\ntests\\dq checks\\parquet_files\\test_patient_sum_treatment_cost_per_facility_type.py:55: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\ndf =    facility_type          full_name  sum_treatment_cost\n0         Clinic       Cheryl Clark         -1625686.43\n1     ...e      Timothy Clark          1701890.19\n63   Urgent Care               None         25341991.28\n\n[64 rows x 3 columns]\ncolumn_names = [&amp;#x27;facility_type&amp;#x27;, &amp;#x27;full_name&amp;#x27;, &amp;#x27;sum_treatment_cost&amp;#x27;], dataset_name = &amp;#x27;dataset&amp;#x27;\n\n    @staticmethod\n    def check_not_null_values(df: DataFrame, column_names=None, dataset_name: str = &amp;quot;dataset&amp;quot;) -&amp;gt; None:\n        columns = column_names or df.columns\n        null_counts = df[columns].isnull().sum()\n        failing = null_counts[null_counts &amp;gt; 0]\n&amp;gt;       assert failing.empty, f&amp;quot;{dataset_name} has NULL values: {failing.to_dict()}&amp;quot;\n               ^^^^^^^^^^^^^\nE       AssertionError: dataset has NULL values: {&amp;#x27;full_name&amp;#x27;: 4}\n\nsrc\\data_quality\\data_quality_validation_library.py:216: AssertionError\n&#34;}], &#34;dq checks/parquet_files/test_patient_sum_treatment_cost_per_facility_type.py::test_check_dataset_is_not_empty&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;dq checks/parquet_files/test_patient_sum_treatment_cost_per_facility_type.py::test_check_dataset_is_not_empty&#34;, &#34;duration&#34;: &#34;0 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;dq checks/parquet_files/test_patient_sum_treatment_cost_per_facility_type.py::test_check_dataset_is_not_empty&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;0 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;dq checks/parquet_files/test_patient_sum_treatment_cost_per_facility_type.py::test_check_no_duplicates&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;dq checks/parquet_files/test_patient_sum_treatment_cost_per_facility_type.py::test_check_no_duplicates&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;dq checks/parquet_files/test_patient_sum_treatment_cost_per_facility_type.py::test_check_no_duplicates&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;dq checks/parquet_files/test_patient_sum_treatment_cost_per_facility_type.py::test_check_count&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;dq checks/parquet_files/test_patient_sum_treatment_cost_per_facility_type.py::test_check_count&#34;, &#34;duration&#34;: &#34;175 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;dq checks/parquet_files/test_patient_sum_treatment_cost_per_facility_type.py::test_check_count&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;175 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;source_data =     facility_type          full_name  sum_treatment_cost\n0          Clinic      Angela Burton          1477601.69\n1   ...      Terri Medina          1668192.88\n119   Urgent Care      Timothy Clark          1701890.19\n\n[120 rows x 3 columns]\ntarget_data =    facility_type          full_name  sum_treatment_cost\n0         Clinic       Cheryl Clark         -1625686.43\n1     ...e      Timothy Clark          1701890.19\n63   Urgent Care               None         25341991.28\n\n[64 rows x 3 columns]\ndata_quality_library = &amp;lt;src.data_quality.data_quality_validation_library.DataQualityLibrary object at 0x000001ABCAD92F90&amp;gt;\n\n    @pytest.mark.parquet_data\n    @pytest.mark.patient_sum_treatment_cost_per_facility_type\n    def test_check_count(source_data, target_data, data_quality_library):\n        &amp;quot;&amp;quot;&amp;quot;Compare record counts: target (aggregated) should be == source (raw)&amp;quot;&amp;quot;&amp;quot;\n&amp;gt;       data_quality_library.check_count(\n            source_data,\n            target_data,\n            source_name=&amp;quot;source (visits_facilities_patients)&amp;quot;,\n            target_name=&amp;quot;target (aggregated parquet)&amp;quot;\n        )\n\ntests\\dq checks\\parquet_files\\test_patient_sum_treatment_cost_per_facility_type.py:83: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nsource_df =     facility_type          full_name  sum_treatment_cost\n0          Clinic      Angela Burton          1477601.69\n1   ...      Terri Medina          1668192.88\n119   Urgent Care      Timothy Clark          1701890.19\n\n[120 rows x 3 columns]\ntarget_df =    facility_type          full_name  sum_treatment_cost\n0         Clinic       Cheryl Clark         -1625686.43\n1     ...e      Timothy Clark          1701890.19\n63   Urgent Care               None         25341991.28\n\n[64 rows x 3 columns]\nsource_name = &amp;#x27;source (visits_facilities_patients)&amp;#x27;, target_name = &amp;#x27;target (aggregated parquet)&amp;#x27;\n\n    @staticmethod\n    def check_count(source_df: DataFrame, target_df: DataFrame,\n                   source_name: str = &amp;quot;source&amp;quot;, target_name: str = &amp;quot;target&amp;quot;) -&amp;gt; None:\n        &amp;quot;&amp;quot;&amp;quot;\n        Compare record counts between source and target datasets.\n    \n        For aggregated data, target count should be &amp;lt;= source count.\n        Use tolerance to allow acceptable variance.\n    \n        Args:\n            source_df (DataFrame): Source dataset\n            target_df (DataFrame): Target dataset (typically aggregated)\n            source_name (str): Name of source dataset for messages\n            target_name (str): Name of target dataset for messages\n            tolerance (int): Acceptable difference in record counts (default: 0)\n    \n        Raises:\n            AssertionError: If counts don&amp;#x27;t meet expectations\n        &amp;quot;&amp;quot;&amp;quot;\n        if not isinstance(source_df, pd.DataFrame):\n            raise TypeError(f&amp;quot;{source_name} must be a pandas DataFrame.&amp;quot;)\n        if not isinstance(target_df, pd.DataFrame):\n            raise TypeError(f&amp;quot;{target_name} must be a pandas DataFrame.&amp;quot;)\n    \n        source_count = len(source_df)\n        target_count = len(target_df)\n    \n        # For aggregated target data, target should have fewer or equal records than source\n        assert target_count &amp;gt; 0, f&amp;quot;{target_name} is empty (0 records)&amp;quot;\n        assert source_count &amp;gt; 0, f&amp;quot;{source_name} is empty (0 records)&amp;quot;\n    \n        # Log the counts for visibility\n        print(f&amp;quot;\\nRecord Count Comparison:&amp;quot;)\n        print(f&amp;quot;  {source_name}: {source_count:,} records&amp;quot;)\n        print(f&amp;quot;  {target_name}: {target_count:,} records&amp;quot;)\n        print(f&amp;quot;  Difference: {source_count - target_count:,} records&amp;quot;)\n        print(f&amp;quot;  Ratio: {target_count/source_count:.2%} (target/source)&amp;quot;)\n    \n        # For aggregated data, target should be smaller or equal\n&amp;gt;       assert target_count == source_count, (\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n            f&amp;quot;{target_name} has MORE records than {source_name}! &amp;quot;\n            f&amp;quot;Target: {target_count:,}, Source: {source_count:,}&amp;quot;\n        )\nE       AssertionError: target (aggregated parquet) has MORE records than source (visits_facilities_patients)! Target: 64, Source: 120\n\nsrc\\data_quality\\data_quality_validation_library.py:87: AssertionError\n&#34;}], &#34;dq checks/parquet_files/test_patient_sum_treatment_cost_per_facility_type.py::test_check_data_completeness&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;dq checks/parquet_files/test_patient_sum_treatment_cost_per_facility_type.py::test_check_data_completeness&#34;, &#34;duration&#34;: &#34;13 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;dq checks/parquet_files/test_patient_sum_treatment_cost_per_facility_type.py::test_check_data_completeness&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;13 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;source_data =     facility_type          full_name  sum_treatment_cost\n0          Clinic      Angela Burton          1477601.69\n1   ...      Terri Medina          1668192.88\n119   Urgent Care      Timothy Clark          1701890.19\n\n[120 rows x 3 columns]\ntarget_data =    facility_type          full_name  sum_treatment_cost\n0         Clinic       Cheryl Clark         -1625686.43\n1     ...e      Timothy Clark          1701890.19\n63   Urgent Care               None         25341991.28\n\n[64 rows x 3 columns]\ndata_quality_library = &amp;lt;src.data_quality.data_quality_validation_library.DataQualityLibrary object at 0x000001ABCAD92F90&amp;gt;\n\n    @pytest.mark.parquet_data\n    @pytest.mark.facility_type_avg_time_spent_per_visit_date\n    def test_check_data_completeness(source_data, target_data, data_quality_library):\n        &amp;quot;&amp;quot;&amp;quot;\n        Validate that target aggregation matches source data.\n    \n        Target transformation:\n        - GROUP BY facility_type and full_name as first_name + last_name\n        sum_treatment_cost\tas SUM(v.treatment_cost)\n        &amp;quot;&amp;quot;&amp;quot;\n&amp;gt;       data_quality_library.check_data_completeness(\n            source_df=source_data,\n            target_df=target_data,\n            source_groupby_cols=[&amp;#x27;facility_type&amp;#x27;, &amp;#x27;full_name&amp;#x27;],\n            source_agg_col=&amp;#x27;sum_treatment_cost&amp;#x27;,\n            target_groupby_cols=[&amp;#x27;facility_type&amp;#x27;, &amp;#x27;full_name&amp;#x27;],\n            target_agg_col=&amp;#x27;sum_treatment_cost&amp;#x27;,\n            agg_function=&amp;#x27;sum&amp;#x27;,\n            source_name=&amp;quot;source (Postgres visits_facilities_patients)&amp;quot;,\n            target_name=&amp;quot;target (parquet aggregated)&amp;quot;\n        )\n\ntests\\dq checks\\parquet_files\\test_patient_sum_treatment_cost_per_facility_type.py:100: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nsource_df =     facility_type          full_name  sum_treatment_cost\n0          Clinic      Angela Burton          1477601.69\n1   ...      Terri Medina          1668192.88\n119   Urgent Care      Timothy Clark          1701890.19\n\n[120 rows x 3 columns]\ntarget_df =    facility_type          full_name  sum_treatment_cost\n0         Clinic       Cheryl Clark         -1625686.43\n1     ...e      Timothy Clark          1701890.19\n63   Urgent Care               None         25341991.28\n\n[64 rows x 3 columns]\nsource_groupby_cols = [&amp;#x27;facility_type&amp;#x27;, &amp;#x27;full_name&amp;#x27;], source_agg_col = &amp;#x27;sum_treatment_cost&amp;#x27;\ntarget_groupby_cols = [&amp;#x27;facility_type&amp;#x27;, &amp;#x27;full_name&amp;#x27;], target_agg_col = &amp;#x27;sum_treatment_cost&amp;#x27;, agg_function = &amp;#x27;sum&amp;#x27;\nsource_name = &amp;#x27;source (Postgres visits_facilities_patients)&amp;#x27;, target_name = &amp;#x27;target (parquet aggregated)&amp;#x27;\nnumeric_tolerance = 0.01\n\n    @staticmethod\n    def check_data_completeness(\n        source_df: DataFrame,\n        target_df: DataFrame,\n        source_groupby_cols: list,\n        source_agg_col: str,\n        target_groupby_cols: list,\n        target_agg_col: str,\n        agg_function: str = &amp;quot;min&amp;quot;,\n        source_name: str = &amp;quot;source&amp;quot;,\n        target_name: str = &amp;quot;target&amp;quot;,\n        numeric_tolerance: float = 0.01,\n    ) -&amp;gt; None:\n        &amp;quot;&amp;quot;&amp;quot;\n        Compare source and target DataFrames directly without performing grouping.\n        Requires `source_df` to already be pre-aggregated at the same grain as `target_df`.\n        &amp;quot;&amp;quot;&amp;quot;\n        # Validate inputs\n        if not isinstance(source_df, pd.DataFrame):\n            raise TypeError(f&amp;quot;{source_name} must be a pandas DataFrame.&amp;quot;)\n        if not isinstance(target_df, pd.DataFrame):\n            raise TypeError(f&amp;quot;{target_name} must be a pandas DataFrame.&amp;quot;)\n    \n        # Columns to compare (use target names)\n        group_cols = list(target_groupby_cols)\n        val_col = target_agg_col\n    \n        # Ensure target has the comparison columns\n        missing_t = [c for c in group_cols + [val_col] if c not in target_df.columns]\n        assert not missing_t, f&amp;quot;{target_name} missing columns: {missing_t}&amp;quot;\n    \n        # Prepare source for comparison:\n        # if source already has target val col, use it; otherwise try to rename source_agg_col -&amp;gt; val_col\n        if all(c in source_df.columns for c in group_cols + [val_col]):\n            s = source_df[group_cols + [val_col]].copy()\n        elif all(c in source_df.columns for c in group_cols + [source_agg_col]):\n            s = source_df[group_cols + [source_agg_col]].copy().rename(columns={source_agg_col: val_col})\n        else:\n            missing_s = [c for c in group_cols + [source_agg_col] if c not in source_df.columns]\n            raise AssertionError(\n                f&amp;quot;{source_name} missing required pre-aggregated columns: {missing_s}. &amp;quot;\n                &amp;quot;This check requires source to already be aggregated to the same grain as target.&amp;quot;\n            )\n    \n        t = target_df[group_cols + [val_col]].copy()\n    \n        # Ensure source is pre-aggregated (no duplicate group keys)\n        dup_mask = s.duplicated(subset=group_cols, keep=False)\n        if dup_mask.any():\n            raise AssertionError(\n                f&amp;quot;{source_name} appears to have multiple rows per group (must be pre-aggregated). &amp;quot;\n                f&amp;quot;Example duplicates:\\n{s[dup_mask].head(5)}&amp;quot;\n            )\n    \n        # Normalize date/timestamp columns and numeric column\n        def _normalize_dates(df, cols):\n            for c in cols:\n                if &amp;#x27;date&amp;#x27; in c.lower() or &amp;#x27;timestamp&amp;#x27; in c.lower():\n                    if c in df.columns:\n                        df[c] = pd.to_datetime(df[c], errors=&amp;#x27;coerce&amp;#x27;).dt.normalize()\n    \n        _normalize_dates(s, group_cols)\n        _normalize_dates(t, group_cols)\n    \n        s[val_col] = pd.to_numeric(s[val_col], errors=&amp;#x27;coerce&amp;#x27;)\n        t[val_col] = pd.to_numeric(t[val_col], errors=&amp;#x27;coerce&amp;#x27;)\n    \n        # Drop rows with any NA in key or value columns (they are invalid for comparison)\n        s = s.dropna(subset=group_cols + [val_col])\n        t = t.dropna(subset=group_cols + [val_col])\n    \n        # Sort deterministically\n        s = s.sort_values(by=group_cols).reset_index(drop=True)\n        t = t.sort_values(by=group_cols).reset_index(drop=True)\n    \n        # Quick shape check with helpful diagnostics\n        if s.shape != t.shape:\n            merged = s.merge(t, on=group_cols, how=&amp;#x27;outer&amp;#x27;, indicator=True)\n            missing_in_target = merged[merged[&amp;#x27;_merge&amp;#x27;] == &amp;#x27;left_only&amp;#x27;][group_cols].head(5)\n            extra_in_target = merged[merged[&amp;#x27;_merge&amp;#x27;] == &amp;#x27;right_only&amp;#x27;][group_cols].head(5)\n            msg = (\n                f&amp;quot;Shape mismatch: {source_name} {s.shape} vs {target_name} {t.shape}.\\n&amp;quot;\n            )\n            if not missing_in_target.empty:\n                msg += f&amp;quot;Groups in {source_name} but missing in {target_name} (examples):\\n{missing_in_target.to_string(index=False)}\\n&amp;quot;\n            if not extra_in_target.empty:\n                msg += f&amp;quot;Groups in {target_name} but missing in {source_name} (examples):\\n{extra_in_target.to_string(index=False)}\\n&amp;quot;\n&amp;gt;           raise AssertionError(msg)\nE           AssertionError: Shape mismatch: source (Postgres visits_facilities_patients) (120, 3) vs target (parquet aggregated) (60, 3).\nE           Groups in source (Postgres visits_facilities_patients) but missing in target (parquet aggregated) (examples):\nE           facility_type      full_name\nE                  Clinic  Angela Burton\nE                  Clinic Cameron Murphy\nE                  Clinic  David Mcguire\nE                  Clinic Deborah Carson\nE                  Clinic    Eric Wilson\n\nsrc\\data_quality\\data_quality_validation_library.py:179: AssertionError\n&#34;}], &#34;test_postgres_facilities.py::test_check_postgres_facilities_is_not_empty&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_postgres_facilities.py::test_check_postgres_facilities_is_not_empty&#34;, &#34;duration&#34;: &#34;5 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_postgres_facilities.py::test_check_postgres_facilities_is_not_empty&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;5 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;test_postgres_facilities.py::test_check_not_null_values&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_postgres_facilities.py::test_check_not_null_values&#34;, &#34;duration&#34;: &#34;2 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_postgres_facilities.py::test_check_not_null_values&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;2 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;test_postgres_facilities.py::test_check_no_duplicates&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_postgres_facilities.py::test_check_no_duplicates&#34;, &#34;duration&#34;: &#34;2 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_postgres_facilities.py::test_check_no_duplicates&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;2 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;test_postgres_patiens.py::test_check_postgres_patients_is_not_empty&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_postgres_patiens.py::test_check_postgres_patients_is_not_empty&#34;, &#34;duration&#34;: &#34;4 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_postgres_patiens.py::test_check_postgres_patients_is_not_empty&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;4 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;test_postgres_patiens.py::test_check_not_null_values&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_postgres_patiens.py::test_check_not_null_values&#34;, &#34;duration&#34;: &#34;9 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_postgres_patiens.py::test_check_not_null_values&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;9 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;test_postgres_patiens.py::test_check_no_duplicates&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_postgres_patiens.py::test_check_no_duplicates&#34;, &#34;duration&#34;: &#34;2 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_postgres_patiens.py::test_check_no_duplicates&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;2 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;test_postgres_visits.py::test_check_postgres_visits_is_not_empty&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_postgres_visits.py::test_check_postgres_visits_is_not_empty&#34;, &#34;duration&#34;: &#34;475 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_postgres_visits.py::test_check_postgres_visits_is_not_empty&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;475 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;test_postgres_visits.py::test_check_not_null_values&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_postgres_visits.py::test_check_not_null_values&#34;, &#34;duration&#34;: &#34;12 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_postgres_visits.py::test_check_not_null_values&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;12 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;test_postgres_visits.py::test_check_no_duplicates&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_postgres_visits.py::test_check_no_duplicates&#34;, &#34;duration&#34;: &#34;50 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_postgres_visits.py::test_check_no_duplicates&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;50 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}]}, &#34;renderCollapsed&#34;: [&#34;passed&#34;], &#34;initialSort&#34;: &#34;result&#34;, &#34;title&#34;: &#34;report.html&#34;}"></div>
+    <script>
+      (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+const { getCollapsedCategory, setCollapsedIds } = require('./storage.js')
+
+class DataManager {
+    setManager(data) {
+        const collapsedCategories = [...getCollapsedCategory(data.renderCollapsed)]
+        const collapsedIds = []
+        const tests = Object.values(data.tests).flat().map((test, index) => {
+            const collapsed = collapsedCategories.includes(test.result.toLowerCase())
+            const id = `test_${index}`
+            if (collapsed) {
+                collapsedIds.push(id)
+            }
+            return {
+                ...test,
+                id,
+                collapsed,
+            }
+        })
+        const dataBlob = { ...data, tests }
+        this.data = { ...dataBlob }
+        this.renderData = { ...dataBlob }
+        setCollapsedIds(collapsedIds)
+    }
+
+    get allData() {
+        return { ...this.data }
+    }
+
+    resetRender() {
+        this.renderData = { ...this.data }
+    }
+
+    setRender(data) {
+        this.renderData.tests = [...data]
+    }
+
+    toggleCollapsedItem(id) {
+        this.renderData.tests = this.renderData.tests.map((test) =>
+            test.id === id ? { ...test, collapsed: !test.collapsed } : test,
+        )
+    }
+
+    set allCollapsed(collapsed) {
+        this.renderData = { ...this.renderData, tests: [...this.renderData.tests.map((test) => (
+            { ...test, collapsed }
+        ))] }
+    }
+
+    get testSubset() {
+        return [...this.renderData.tests]
+    }
+
+    get environment() {
+        return this.renderData.environment
+    }
+
+    get initialSort() {
+        return this.data.initialSort
+    }
+}
+
+module.exports = {
+    manager: new DataManager(),
+}
+
+},{"./storage.js":8}],2:[function(require,module,exports){
+const mediaViewer = require('./mediaviewer.js')
+const templateEnvRow = document.getElementById('template_environment_row')
+const templateResult = document.getElementById('template_results-table__tbody')
+
+function htmlToElements(html) {
+    const temp = document.createElement('template')
+    temp.innerHTML = html
+    return temp.content.childNodes
+}
+
+const find = (selector, elem) => {
+    if (!elem) {
+        elem = document
+    }
+    return elem.querySelector(selector)
+}
+
+const findAll = (selector, elem) => {
+    if (!elem) {
+        elem = document
+    }
+    return [...elem.querySelectorAll(selector)]
+}
+
+const dom = {
+    getStaticRow: (key, value) => {
+        const envRow = templateEnvRow.content.cloneNode(true)
+        const isObj = typeof value === 'object' && value !== null
+        const values = isObj ? Object.keys(value).map((k) => `${k}: ${value[k]}`) : null
+
+        const valuesElement = htmlToElements(
+            values ? `<ul>${values.map((val) => `<li>${val}</li>`).join('')}<ul>` : `<div>${value}</div>`)[0]
+        const td = findAll('td', envRow)
+        td[0].textContent = key
+        td[1].appendChild(valuesElement)
+
+        return envRow
+    },
+    getResultTBody: ({ testId, id, log, extras, resultsTableRow, tableHtml, result, collapsed }) => {
+        const resultBody = templateResult.content.cloneNode(true)
+        resultBody.querySelector('tbody').classList.add(result.toLowerCase())
+        resultBody.querySelector('tbody').id = testId
+        resultBody.querySelector('.collapsible').dataset.id = id
+
+        resultsTableRow.forEach((html) => {
+            const t = document.createElement('template')
+            t.innerHTML = html
+            resultBody.querySelector('.collapsible').appendChild(t.content)
+        })
+
+        if (log) {
+            // Wrap lines starting with "E" with span.error to color those lines red
+            const wrappedLog = log.replace(/^E.*$/gm, (match) => `<span class="error">${match}</span>`)
+            resultBody.querySelector('.log').innerHTML = wrappedLog
+        } else {
+            resultBody.querySelector('.log').remove()
+        }
+
+        if (collapsed) {
+            resultBody.querySelector('.collapsible > td')?.classList.add('collapsed')
+            resultBody.querySelector('.extras-row').classList.add('hidden')
+        } else {
+            resultBody.querySelector('.collapsible > td')?.classList.remove('collapsed')
+        }
+
+        const media = []
+        extras?.forEach(({ name, format_type, content }) => {
+            if (['image', 'video'].includes(format_type)) {
+                media.push({ path: content, name, format_type })
+            }
+
+            if (format_type === 'html') {
+                resultBody.querySelector('.extraHTML').insertAdjacentHTML('beforeend', `<div>${content}</div>`)
+            }
+        })
+        mediaViewer.setup(resultBody, media)
+
+        // Add custom html from the pytest_html_results_table_html hook
+        tableHtml?.forEach((item) => {
+            resultBody.querySelector('td[class="extra"]').insertAdjacentHTML('beforeend', item)
+        })
+
+        return resultBody
+    },
+}
+
+module.exports = {
+    dom,
+    htmlToElements,
+    find,
+    findAll,
+}
+
+},{"./mediaviewer.js":6}],3:[function(require,module,exports){
+const { manager } = require('./datamanager.js')
+const { doSort } = require('./sort.js')
+const storageModule = require('./storage.js')
+
+const getFilteredSubSet = (filter) =>
+    manager.allData.tests.filter(({ result }) => filter.includes(result.toLowerCase()))
+
+const doInitFilter = () => {
+    const currentFilter = storageModule.getVisible()
+    const filteredSubset = getFilteredSubSet(currentFilter)
+    manager.setRender(filteredSubset)
+}
+
+const doFilter = (type, show) => {
+    if (show) {
+        storageModule.showCategory(type)
+    } else {
+        storageModule.hideCategory(type)
+    }
+
+    const currentFilter = storageModule.getVisible()
+    const filteredSubset = getFilteredSubSet(currentFilter)
+    manager.setRender(filteredSubset)
+
+    const sortColumn = storageModule.getSort()
+    doSort(sortColumn, true)
+}
+
+module.exports = {
+    doFilter,
+    doInitFilter,
+}
+
+},{"./datamanager.js":1,"./sort.js":7,"./storage.js":8}],4:[function(require,module,exports){
+const { redraw, bindEvents, renderStatic } = require('./main.js')
+const { doInitFilter } = require('./filter.js')
+const { doInitSort } = require('./sort.js')
+const { manager } = require('./datamanager.js')
+const data = JSON.parse(document.getElementById('data-container').dataset.jsonblob)
+
+function init() {
+    manager.setManager(data)
+    doInitFilter()
+    doInitSort()
+    renderStatic()
+    redraw()
+    bindEvents()
+}
+
+init()
+
+},{"./datamanager.js":1,"./filter.js":3,"./main.js":5,"./sort.js":7}],5:[function(require,module,exports){
+const { dom, find, findAll } = require('./dom.js')
+const { manager } = require('./datamanager.js')
+const { doSort } = require('./sort.js')
+const { doFilter } = require('./filter.js')
+const {
+    getVisible,
+    getCollapsedIds,
+    setCollapsedIds,
+    getSort,
+    getSortDirection,
+    possibleFilters,
+} = require('./storage.js')
+
+const removeChildren = (node) => {
+    while (node.firstChild) {
+        node.removeChild(node.firstChild)
+    }
+}
+
+const renderStatic = () => {
+    const renderEnvironmentTable = () => {
+        const environment = manager.environment
+        const rows = Object.keys(environment).map((key) => dom.getStaticRow(key, environment[key]))
+        const table = document.getElementById('environment')
+        removeChildren(table)
+        rows.forEach((row) => table.appendChild(row))
+    }
+    renderEnvironmentTable()
+}
+
+const addItemToggleListener = (elem) => {
+    elem.addEventListener('click', ({ target }) => {
+        const id = target.parentElement.dataset.id
+        manager.toggleCollapsedItem(id)
+
+        const collapsedIds = getCollapsedIds()
+        if (collapsedIds.includes(id)) {
+            const updated = collapsedIds.filter((item) => item !== id)
+            setCollapsedIds(updated)
+        } else {
+            collapsedIds.push(id)
+            setCollapsedIds(collapsedIds)
+        }
+        redraw()
+    })
+}
+
+const renderContent = (tests) => {
+    const sortAttr = getSort(manager.initialSort)
+    const sortAsc = JSON.parse(getSortDirection())
+    const rows = tests.map(dom.getResultTBody)
+    const table = document.getElementById('results-table')
+    const tableHeader = document.getElementById('results-table-head')
+
+    const newTable = document.createElement('table')
+    newTable.id = 'results-table'
+
+    // remove all sorting classes and set the relevant
+    findAll('.sortable', tableHeader).forEach((elem) => elem.classList.remove('asc', 'desc'))
+    tableHeader.querySelector(`.sortable[data-column-type="${sortAttr}"]`)?.classList.add(sortAsc ? 'desc' : 'asc')
+    newTable.appendChild(tableHeader)
+
+    if (!rows.length) {
+        const emptyTable = document.getElementById('template_results-table__body--empty').content.cloneNode(true)
+        newTable.appendChild(emptyTable)
+    } else {
+        rows.forEach((row) => {
+            if (!!row) {
+                findAll('.collapsible td:not(.col-links', row).forEach(addItemToggleListener)
+                find('.logexpander', row).addEventListener('click',
+                    (evt) => evt.target.parentNode.classList.toggle('expanded'),
+                )
+                newTable.appendChild(row)
+            }
+        })
+    }
+
+    table.replaceWith(newTable)
+}
+
+const renderDerived = () => {
+    const currentFilter = getVisible()
+    possibleFilters.forEach((result) => {
+        const input = document.querySelector(`input[data-test-result="${result}"]`)
+        input.checked = currentFilter.includes(result)
+    })
+}
+
+const bindEvents = () => {
+    const filterColumn = (evt) => {
+        const { target: element } = evt
+        const { testResult } = element.dataset
+
+        doFilter(testResult, element.checked)
+        const collapsedIds = getCollapsedIds()
+        const updated = manager.renderData.tests.map((test) => {
+            return {
+                ...test,
+                collapsed: collapsedIds.includes(test.id),
+            }
+        })
+        manager.setRender(updated)
+        redraw()
+    }
+
+    const header = document.getElementById('environment-header')
+    header.addEventListener('click', () => {
+        const table = document.getElementById('environment')
+        table.classList.toggle('hidden')
+        header.classList.toggle('collapsed')
+    })
+
+    findAll('input[name="filter_checkbox"]').forEach((elem) => {
+        elem.addEventListener('click', filterColumn)
+    })
+
+    findAll('.sortable').forEach((elem) => {
+        elem.addEventListener('click', (evt) => {
+            const { target: element } = evt
+            const { columnType } = element.dataset
+            doSort(columnType)
+            redraw()
+        })
+    })
+
+    document.getElementById('show_all_details').addEventListener('click', () => {
+        manager.allCollapsed = false
+        setCollapsedIds([])
+        redraw()
+    })
+    document.getElementById('hide_all_details').addEventListener('click', () => {
+        manager.allCollapsed = true
+        const allIds = manager.renderData.tests.map((test) => test.id)
+        setCollapsedIds(allIds)
+        redraw()
+    })
+}
+
+const redraw = () => {
+    const { testSubset } = manager
+
+    renderContent(testSubset)
+    renderDerived()
+}
+
+module.exports = {
+    redraw,
+    bindEvents,
+    renderStatic,
+}
+
+},{"./datamanager.js":1,"./dom.js":2,"./filter.js":3,"./sort.js":7,"./storage.js":8}],6:[function(require,module,exports){
+class MediaViewer {
+    constructor(assets) {
+        this.assets = assets
+        this.index = 0
+    }
+
+    nextActive() {
+        this.index = this.index === this.assets.length - 1 ? 0 : this.index + 1
+        return [this.activeFile, this.index]
+    }
+
+    prevActive() {
+        this.index = this.index === 0 ? this.assets.length - 1 : this.index -1
+        return [this.activeFile, this.index]
+    }
+
+    get currentIndex() {
+        return this.index
+    }
+
+    get activeFile() {
+        return this.assets[this.index]
+    }
+}
+
+
+const setup = (resultBody, assets) => {
+    if (!assets.length) {
+        resultBody.querySelector('.media').classList.add('hidden')
+        return
+    }
+
+    const mediaViewer = new MediaViewer(assets)
+    const container = resultBody.querySelector('.media-container')
+    const leftArrow = resultBody.querySelector('.media-container__nav--left')
+    const rightArrow = resultBody.querySelector('.media-container__nav--right')
+    const mediaName = resultBody.querySelector('.media__name')
+    const counter = resultBody.querySelector('.media__counter')
+    const imageEl = resultBody.querySelector('img')
+    const sourceEl = resultBody.querySelector('source')
+    const videoEl = resultBody.querySelector('video')
+
+    const setImg = (media, index) => {
+        if (media?.format_type === 'image') {
+            imageEl.src = media.path
+
+            imageEl.classList.remove('hidden')
+            videoEl.classList.add('hidden')
+        } else if (media?.format_type === 'video') {
+            sourceEl.src = media.path
+
+            videoEl.classList.remove('hidden')
+            imageEl.classList.add('hidden')
+        }
+
+        mediaName.innerText = media?.name
+        counter.innerText = `${index + 1} / ${assets.length}`
+    }
+    setImg(mediaViewer.activeFile, mediaViewer.currentIndex)
+
+    const moveLeft = () => {
+        const [media, index] = mediaViewer.prevActive()
+        setImg(media, index)
+    }
+    const doRight = () => {
+        const [media, index] = mediaViewer.nextActive()
+        setImg(media, index)
+    }
+    const openImg = () => {
+        window.open(mediaViewer.activeFile.path, '_blank')
+    }
+    if (assets.length === 1) {
+        container.classList.add('media-container--fullscreen')
+    } else {
+        leftArrow.addEventListener('click', moveLeft)
+        rightArrow.addEventListener('click', doRight)
+    }
+    imageEl.addEventListener('click', openImg)
+}
+
+module.exports = {
+    setup,
+}
+
+},{}],7:[function(require,module,exports){
+const { manager } = require('./datamanager.js')
+const storageModule = require('./storage.js')
+
+const genericSort = (list, key, ascending, customOrder) => {
+    let sorted
+    if (customOrder) {
+        sorted = list.sort((a, b) => {
+            const aValue = a.result.toLowerCase()
+            const bValue = b.result.toLowerCase()
+
+            const aIndex = customOrder.findIndex((item) => item.toLowerCase() === aValue)
+            const bIndex = customOrder.findIndex((item) => item.toLowerCase() === bValue)
+
+            // Compare the indices to determine the sort order
+            return aIndex - bIndex
+        })
+    } else {
+        sorted = list.sort((a, b) => a[key] === b[key] ? 0 : a[key] > b[key] ? 1 : -1)
+    }
+
+    if (ascending) {
+        sorted.reverse()
+    }
+    return sorted
+}
+
+const durationSort = (list, ascending) => {
+    const parseDuration = (duration) => {
+        if (duration.includes(':')) {
+            // If it's in the format "HH:mm:ss"
+            const [hours, minutes, seconds] = duration.split(':').map(Number)
+            return (hours * 3600 + minutes * 60 + seconds) * 1000
+        } else {
+            // If it's in the format "nnn ms"
+            return parseInt(duration)
+        }
+    }
+    const sorted = list.sort((a, b) => parseDuration(a['duration']) - parseDuration(b['duration']))
+    if (ascending) {
+        sorted.reverse()
+    }
+    return sorted
+}
+
+const doInitSort = () => {
+    const type = storageModule.getSort(manager.initialSort)
+    const ascending = storageModule.getSortDirection()
+    const list = manager.testSubset
+    const initialOrder = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed', 'Skipped', 'Passed']
+
+    storageModule.setSort(type)
+    storageModule.setSortDirection(ascending)
+
+    if (type?.toLowerCase() === 'original') {
+        manager.setRender(list)
+    } else {
+        let sortedList
+        switch (type) {
+        case 'duration':
+            sortedList = durationSort(list, ascending)
+            break
+        case 'result':
+            sortedList = genericSort(list, type, ascending, initialOrder)
+            break
+        default:
+            sortedList = genericSort(list, type, ascending)
+            break
+        }
+        manager.setRender(sortedList)
+    }
+}
+
+const doSort = (type, skipDirection) => {
+    const newSortType = storageModule.getSort(manager.initialSort) !== type
+    const currentAsc = storageModule.getSortDirection()
+    let ascending
+    if (skipDirection) {
+        ascending = currentAsc
+    } else {
+        ascending = newSortType ? false : !currentAsc
+    }
+    storageModule.setSort(type)
+    storageModule.setSortDirection(ascending)
+
+    const list = manager.testSubset
+    const sortedList = type === 'duration' ? durationSort(list, ascending) : genericSort(list, type, ascending)
+    manager.setRender(sortedList)
+}
+
+module.exports = {
+    doInitSort,
+    doSort,
+}
+
+},{"./datamanager.js":1,"./storage.js":8}],8:[function(require,module,exports){
+const possibleFilters = [
+    'passed',
+    'skipped',
+    'failed',
+    'error',
+    'xfailed',
+    'xpassed',
+    'rerun',
+]
+
+const getVisible = () => {
+    const url = new URL(window.location.href)
+    const settings = new URLSearchParams(url.search).get('visible')
+    const lower = (item) => {
+        const lowerItem = item.toLowerCase()
+        if (possibleFilters.includes(lowerItem)) {
+            return lowerItem
+        }
+        return null
+    }
+    return settings === null ?
+        possibleFilters :
+        [...new Set(settings?.split(',').map(lower).filter((item) => item))]
+}
+
+const hideCategory = (categoryToHide) => {
+    const url = new URL(window.location.href)
+    const visibleParams = new URLSearchParams(url.search).get('visible')
+    const currentVisible = visibleParams ? visibleParams.split(',') : [...possibleFilters]
+    const settings = [...new Set(currentVisible)].filter((f) => f !== categoryToHide).join(',')
+
+    url.searchParams.set('visible', settings)
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const showCategory = (categoryToShow) => {
+    if (typeof window === 'undefined') {
+        return
+    }
+    const url = new URL(window.location.href)
+    const currentVisible = new URLSearchParams(url.search).get('visible')?.split(',').filter(Boolean) ||
+        [...possibleFilters]
+    const settings = [...new Set([categoryToShow, ...currentVisible])]
+    const noFilter = possibleFilters.length === settings.length || !settings.length
+
+    noFilter ? url.searchParams.delete('visible') : url.searchParams.set('visible', settings.join(','))
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const getSort = (initialSort) => {
+    const url = new URL(window.location.href)
+    let sort = new URLSearchParams(url.search).get('sort')
+    if (!sort) {
+        sort = initialSort || 'result'
+    }
+    return sort
+}
+
+const setSort = (type) => {
+    const url = new URL(window.location.href)
+    url.searchParams.set('sort', type)
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const getCollapsedCategory = (renderCollapsed) => {
+    let categories
+    if (typeof window !== 'undefined') {
+        const url = new URL(window.location.href)
+        const collapsedItems = new URLSearchParams(url.search).get('collapsed')
+        switch (true) {
+        case !renderCollapsed && collapsedItems === null:
+            categories = ['passed']
+            break
+        case collapsedItems?.length === 0 || /^["']{2}$/.test(collapsedItems):
+            categories = []
+            break
+        case /^all$/.test(collapsedItems) || collapsedItems === null && /^all$/.test(renderCollapsed):
+            categories = [...possibleFilters]
+            break
+        default:
+            categories = collapsedItems?.split(',').map((item) => item.toLowerCase()) || renderCollapsed
+            break
+        }
+    } else {
+        categories = []
+    }
+    return categories
+}
+
+const getSortDirection = () => JSON.parse(sessionStorage.getItem('sortAsc')) || false
+const setSortDirection = (ascending) => sessionStorage.setItem('sortAsc', ascending)
+
+const getCollapsedIds = () => JSON.parse(sessionStorage.getItem('collapsedIds')) || []
+const setCollapsedIds = (list) => sessionStorage.setItem('collapsedIds', JSON.stringify(list))
+
+module.exports = {
+    getVisible,
+    hideCategory,
+    showCategory,
+    getCollapsedIds,
+    setCollapsedIds,
+    getSort,
+    setSort,
+    getSortDirection,
+    setSortDirection,
+    getCollapsedCategory,
+    possibleFilters,
+}
+
+},{}]},{},[4]);
+    </script>
+  </footer>
+</html>

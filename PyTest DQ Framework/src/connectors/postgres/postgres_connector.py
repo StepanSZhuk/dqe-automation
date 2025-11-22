@@ -4,6 +4,16 @@ import psycopg2
 from psycopg2.extensions import connection
 
 import pandas as pd
+import warnings
+
+# Suppress pandas UserWarning about using raw DBAPI2 connection objects
+# pandas recommends SQLAlchemy connectables; we still support DBAPI2 via psycopg2,
+# but the warning is noisy during pytest runs so suppress it here specifically.
+warnings.filterwarnings(
+    "ignore",
+    message="pandas only supports SQLAlchemy connectable.*",
+    category=UserWarning,
+)
 from pandas import DataFrame
 
 from data_dev.config import postgres_config
@@ -27,21 +37,14 @@ class PostgresConnectorContextManager:
         connection (Optional[connection]): The active database connection object.
     """
 
-    def __init__(self, autocommit: bool = False):
-        """
-        Initialize the database context manager.
-
-        Args:
-            autocommit (bool): Enable or disable autocommit mode for the connection.
-                               Defaults to False.
-        """
-        self.host = postgres_config.host
-        self.port = postgres_config.port
-        self.db = postgres_config.db
-        self.user = postgres_config.user
-        self.password = postgres_config.password
+    def __init__(self, db_host=None, db_port=None, db_name=None, db_user=None, db_password=None, autocommit=False):
+        self.host = db_host or postgres_config.host
+        self.port = int(db_port or postgres_config.port)
+        self.db = db_name or postgres_config.db
+        self.user = db_user or postgres_config.user
+        self.password = db_password or postgres_config.password
         self.autocommit = autocommit
-        self.connection: Optional[connection] = None
+        self.connection = None
 
     def __enter__(self):
         """
@@ -95,10 +98,27 @@ class PostgresConnectorContextManager:
             Exception: If the query execution fails, an exception is raised with the error message.
         """
         try:
-            data_df = pd.read_sql(query, self.connection)
+            # pandas emits a UserWarning when using a raw DBAPI2 connection
+            # (it prefers a SQLAlchemy connectable). Suppress that specific
+            # warning here to keep pytest output clean. For a long-term
+            # solution, consider using SQLAlchemy's create_engine.
+            with warnings.catch_warnings():
+                warnings.filterwarnings(
+                    "ignore",
+                    message="pandas only supports SQLAlchemy connectable.*",
+                    category=UserWarning,
+                )
+                data_df = pd.read_sql(query, self.connection)
             return data_df
         except Exception as e:
             print(f'Failed to receive data from DB\nError: {e}\n')
             raise
 
 
+def target_data(db_connection):
+    target_query = """
+    SELECT * from mydatabase.public.patients
+    """
+    target_data = db_connection.get_data_sql(target_query)
+    print(target_data)
+    return target_data

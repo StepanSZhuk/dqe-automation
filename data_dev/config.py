@@ -113,13 +113,22 @@ data_generator_config = DataGeneratorConfig(
 )
 
 # Instance of ParquetStorageConfig
+import os
+_REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Parquet data lives under the repository root `parquet_data` directory
+_PARQUET_ROOT = os.path.join(_REPO_ROOT, 'parquet_data')
+_PARQUET_ROOT = os.path.normpath(_PARQUET_ROOT)
+
 parquet_storage_config = ParquetStorageConfig(
-    storage_path_facility_type_avg_time_spent_per_visit_date='/parquet_data/'
-                                                             'facility_type_avg_time_spent_per_visit_date',
-    storage_path_patient_sum_treatment_cost_per_facility_type='/parquet_data/'
-                                                              'patient_sum_treatment_cost_per_facility_type',
-    storage_path_facility_name_min_time_spent_per_visit_date='/parquet_data/'
-                                                             'facility_name_min_time_spent_per_visit_date'
+    storage_path_facility_type_avg_time_spent_per_visit_date=os.path.join(
+        _PARQUET_ROOT, 'facility_type_avg_time_spent_per_visit_date'
+    ),
+    storage_path_patient_sum_treatment_cost_per_facility_type=os.path.join(
+        _PARQUET_ROOT, 'patient_sum_treatment_cost_per_facility_type'
+    ),
+    storage_path_facility_name_min_time_spent_per_visit_date=os.path.join(
+        _PARQUET_ROOT, 'facility_name_min_time_spent_per_visit_date'
+    )
 )
 
 # Instance of ReportGeneratorConfig
