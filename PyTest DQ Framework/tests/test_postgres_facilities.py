@@ -19,11 +19,15 @@ def source_data(db_connection):
 
 @pytest.mark.smoke
 @pytest.mark.parquet_data
+@pytest.mark.postgres_data
+@pytest.mark.consistency_check
 def test_check_postgres_facilities_is_not_empty(source_data, data_quality_library):
     data_quality_library.check_dataset_is_not_empty(source_data)
 
 @pytest.mark.smoke
 @pytest.mark.parquet_data
+@pytest.mark.postgres_data
+@pytest.mark.validity_check
 def test_check_not_null_values(source_data, data_quality_library):
     data_quality_library.check_not_null_values(
         source_data,
@@ -31,7 +35,10 @@ def test_check_not_null_values(source_data, data_quality_library):
     )
 
 
+@pytest.mark.smoke
 @pytest.mark.parquet_data
+@pytest.mark.postgres_data
+@pytest.mark.uniqueness
 def test_check_no_duplicates(source_data, data_quality_library):
     """Check that there are no duplicate rows in the dataset."""
     data_quality_library.check_duplicates(

@@ -45,17 +45,20 @@ def target_data(parquet_reader):
     target_data = parquet_reader.process(target_path, include_subfolders=True)
     return target_data
 
+@pytest.mark.smoke
 @pytest.mark.parquet_data
 @pytest.mark.smoke
 @pytest.mark.facility_type_avg_time_spent_per_visit_date
+@pytest.mark.consistency_check
 def test_check_dataset_is_not_empty(target_data, data_quality_library):
     data_quality_library.check_dataset_is_not_empty(target_data)
 
 
+@pytest.mark.smoke
 @pytest.mark.parquet_data
 @pytest.mark.facility_type_avg_time_spent_per_visit_date
+@pytest.mark.validity_check
 def test_check_not_null_values(target_data, data_quality_library):
-    print(target_data)
     data_quality_library.check_not_null_values(
         target_data,
         ["facility_type", "visit_date", "avg_time_spent"],
@@ -64,6 +67,7 @@ def test_check_not_null_values(target_data, data_quality_library):
 
 @pytest.mark.parquet_data
 @pytest.mark.facility_type_avg_time_spent_per_visit_date
+@pytest.mark.uniqueness
 def test_check_no_duplicates(target_data, data_quality_library):
     """Check that there are no duplicate rows in the dataset."""
     data_quality_library.check_duplicates(
@@ -72,8 +76,10 @@ def test_check_no_duplicates(target_data, data_quality_library):
         dataset_name="facility_type_avg_time_spent_per_visit_date"
     )
 
+
 @pytest.mark.parquet_data
 @pytest.mark.facility_type_avg_time_spent_per_visit_date
+@pytest.mark.completeness
 def test_check_count(source_data, target_data, data_quality_library):
     """Compare record counts: target (aggregated) should be == source (raw)"""
     data_quality_library.check_count(
@@ -83,8 +89,11 @@ def test_check_count(source_data, target_data, data_quality_library):
         target_name="target (aggregated parquet)"
     )
 
+
+@pytest.mark.smoke
 @pytest.mark.parquet_data
 @pytest.mark.facility_type_avg_time_spent_per_visit_date
+@pytest.mark.completeness
 def test_check_data_completeness(source_data, target_data, data_quality_library):
     """
     Validate that target aggregation matches source data.
