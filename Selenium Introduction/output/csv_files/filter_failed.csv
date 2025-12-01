@@ -1,0 +1,9 @@
+Result,Test,Duration,Links
+Failed,dq checks/parquet_files/test_facility_name_min_time_spent_per_visit_date.py::test_check_count,669 ms,
+Failed,dq checks/parquet_files/test_facility_name_min_time_spent_per_visit_date.py::test_check_data_completeness,345 ms,
+Failed,dq checks/parquet_files/test_facility_name_min_time_spent_per_visit_date.py::test_check_no_duplicates,28 ms,
+Failed,dq checks/parquet_files/test_facility_type_avg_time_spent_per_visit_date.py::test_check_count,483 ms,
+Failed,dq checks/parquet_files/test_facility_type_avg_time_spent_per_visit_date.py::test_check_data_completeness,132 ms,
+Failed,dq checks/parquet_files/test_patient_sum_treatment_cost_per_facility_type.py::test_check_not_null_values,40 ms,
+Failed,dq checks/parquet_files/test_patient_sum_treatment_cost_per_facility_type.py::test_check_count,245 ms,
+Failed,dq checks/parquet_files/test_patient_sum_treatment_cost_per_facility_type.py::test_check_data_completeness,15 ms,
