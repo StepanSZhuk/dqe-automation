@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-12-10T13:25:20.560967" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Users\Stepan_Zhuk\Documents\GitHub\dqe-automation\Robot Framework\test.robot">
+<kw name="Open Browser To Report" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-12-10T13:25:21.405478" level="INFO">${absolute_path} = C:/Users/Stepan_Zhuk/Documents/GitHub/dqe-automation/Robot Framework/report.html</msg>
+<var>${absolute_path}</var>
+<arg>__import__('pathlib').Path(r'${REPORT_FILE}').resolve().as_posix()</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-12-10T13:25:21.404687" elapsed="0.000841"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-12-10T13:25:21.405876" level="INFO">${report_url} = file:///C:/Users/Stepan_Zhuk/Documents/GitHub/dqe-automation/Robot Framework/report.html</msg>
+<var>${report_url}</var>
+<arg>file:///${absolute_path}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-12-10T13:25:21.405685" elapsed="0.000219"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-12-10T13:25:21.406193" level="INFO">Opening URL: file:///C:/Users/Stepan_Zhuk/Documents/GitHub/dqe-automation/Robot Framework/report.html</msg>
+<arg>Opening URL: ${report_url}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-12-10T13:25:21.406004" elapsed="0.000461"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-10T13:25:21.406931" level="INFO">Opening browser 'chrome' to base url 'file:///C:/Users/Stepan_Zhuk/Documents/GitHub/dqe-automation/Robot Framework/report.html'.</msg>
+<arg>${report_url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-10T13:25:21.406664" elapsed="2.721920"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-12-10T13:25:24.129001" elapsed="0.057703"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//table[@id='results-table']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-12-10T13:25:24.187072" elapsed="0.041584"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-12-10T13:25:24.229588" level="INFO">Report loaded successfully</msg>
+<arg>Report loaded successfully</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-12-10T13:25:24.229159" elapsed="0.002528"/>
+</kw>
+<doc>Open Chrome browser and load the HTML report</doc>
+<status status="PASS" start="2025-12-10T13:25:21.403915" elapsed="2.827993"/>
+</kw>
+<test id="s1-t1" name="Validate HTML Table Matches Parquet Dataset" line="19">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-12-10T13:25:24.235224" level="INFO">Step 1: Locate HTML table in report</msg>
+<arg>Step 1: Locate HTML table in report</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-12-10T13:25:24.234901" elapsed="0.002715"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-12-10T13:25:24.259862" level="INFO">${table_element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="9080c9cc45a9dc989ba8d14d5bcaf3fb", element="f.2526F7370BED741F4B213681FF43C78E.d.481E0C4DAD842C58A5A77CB27B00BD89.e.3")&gt;</msg>
+<var>${table_element}</var>
+<arg>xpath=//table[@id='results-table']</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-12-10T13:25:24.241941" elapsed="0.018044"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-12-10T13:25:24.262789" level="INFO">Step 2: Extract table data into DataFrame</msg>
+<arg>Step 2: Extract table data into DataFrame</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-12-10T13:25:24.262304" elapsed="0.001027"/>
+</kw>
+<kw name="Read Html Table To Dataframe" owner="helper">
+<msg time="2025-12-10T13:25:26.533209" level="INFO">Loaded HTML table: 24 rows, 4 columns
+  Columns: ['result', 'test', 'duration', 'links']</msg>
+<msg time="2025-12-10T13:25:26.545105" level="INFO">${html_df} =     result                                               test  duration links
+0   Failed  dq checks/parquet_files/test_facility_name_min...    669 ms      
+1   Failed  dq checks/parquet_files/test_fac...</msg>
+<var>${html_df}</var>
+<arg>${table_element}</arg>
+<doc>Read an HTML table into a Pandas DataFrame.</doc>
+<status status="PASS" start="2025-12-10T13:25:24.264379" elapsed="2.280838"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-12-10T13:25:26.545974" level="INFO">HTML DataFrame loaded</msg>
+<arg>HTML DataFrame loaded</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-12-10T13:25:26.545668" elapsed="0.000541"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-12-10T13:25:26.546736" level="INFO">Step 3: Read Parquet dataset with optional filter</msg>
+<arg>Step 3: Read Parquet dataset with optional filter</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-12-10T13:25:26.546510" elapsed="0.000409"/>
+</kw>
+<kw name="Read Parquet With Filter" owner="helper">
+<msg time="2025-12-10T13:25:26.618517" level="INFO">Loaded Parquet data: 24 rows, 4 columns
+  Columns: ['result', 'test', 'duration', 'links']</msg>
+<msg time="2025-12-10T13:25:26.629576" level="INFO">${parquet_df} =     result                                               test  duration links
+0   Passed  dq checks/parquet_files/test_facility_name_min...  00:00:03      
+1   Passed  dq checks/parquet_files/test_fac...</msg>
+<var>${parquet_df}</var>
+<arg>${PARQUET_FOLDER}</arg>
+<arg>${FILTER_DATE}</arg>
+<doc>Read a partitioned Parquet dataset with optional date filtering.</doc>
+<status status="PASS" start="2025-12-10T13:25:26.547317" elapsed="0.082392"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-12-10T13:25:26.630729" level="INFO">Parquet DataFrame loaded</msg>
+<arg>Parquet DataFrame loaded</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-12-10T13:25:26.630374" elapsed="0.000625"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-12-10T13:25:26.632151" level="INFO">Step 4: Compare DataFrames for exact match</msg>
+<arg>Step 4: Compare DataFrames for exact match</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-12-10T13:25:26.631867" elapsed="0.001185"/>
+</kw>
+<kw name="Compare Dataframes" owner="helper">
+<msg time="2025-12-10T13:25:26.648267" level="INFO">${match} = True</msg>
+<msg time="2025-12-10T13:25:26.648409" level="INFO">${report} = ================================================================================
+DATAFRAME COMPARISON REPORT
+================================================================================
+
+ Shape Co...</msg>
+<var>${match}</var>
+<var>${report}</var>
+<arg>${html_df}</arg>
+<arg>${parquet_df}</arg>
+<arg>df1_name=HTML Table</arg>
+<arg>df2_name=Parquet Dataset</arg>
+<doc>Compare two DataFrames for exact match and return detailed differences.</doc>
+<status status="PASS" start="2025-12-10T13:25:26.634941" elapsed="0.013521"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-12-10T13:25:26.649445" level="INFO">Comparison Report:
+================================================================================
+DATAFRAME COMPARISON REPORT
+================================================================================
+
+ Shape Comparison:
+  HTML Table: 24 rows × 4 columns
+  Parquet Dataset: 24 rows × 4 columns
+
+✓ Column names match: ['duration', 'links', 'result', 'test']
+
+✅ Data values match exactly!
+
+================================================================================
+ RESULT: DataFrames match exactly!
+================================================================================</msg>
+<arg>Comparison Report:\n${report}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-12-10T13:25:26.648926" elapsed="0.001560"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${match}</arg>
+<arg>msg=DataFrames do not match!\n${report}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-12-10T13:25:26.651632" elapsed="0.000626"/>
+</kw>
+<doc>Compare HTML table data with Parquet dataset.
+Opens local HTML report, extracts table, reads Parquet with optional filtering,
+and compares both datasets for exact match.</doc>
+<tag>data-validation</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2025-12-10T13:25:24.232103" elapsed="2.420597"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-10T13:25:26.653970" elapsed="8.756494"/>
+</kw>
+<doc>Test to validate HTML report table data against Parquet dataset.
+Opens local HTML report, extracts table data, reads Parquet dataset,
+optionally filters by date, and compares both for exact match.</doc>
+<status status="PASS" start="2025-12-10T13:25:20.562587" elapsed="14.848045"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">data-validation</stat>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="1" fail="0" skip="0">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
